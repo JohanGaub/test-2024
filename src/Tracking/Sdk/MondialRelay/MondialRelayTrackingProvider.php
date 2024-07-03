@@ -12,7 +12,7 @@ use App\Tracking\Sdk\TrackingProviderInterface;
 use App\Tracking\Sdk\TrackingResponse;
 use App\Tracking\Sdk\TrackingResponseInterface;
 
-final class MondialRelayTrackingProvider extends AbstractTrackingProvider implements TrackingProviderInterface
+final class MondialRelayTrackingProvider extends AbstractTrackingProvider
 {
 //    public function supports(string $trackingCode): bool
 //    {

@@ -12,7 +12,7 @@ use App\Tracking\Sdk\TrackingProviderInterface;
 use App\Tracking\Sdk\TrackingResponse;
 use App\Tracking\Sdk\TrackingResponseInterface;
 
-final class ChronopostTrackingProvider extends AbstractTrackingProvider implements TrackingProviderInterface
+final class ChronopostTrackingProvider extends AbstractTrackingProvider
 {
 //    public function supports(string $trackingCode): bool
 //    {
