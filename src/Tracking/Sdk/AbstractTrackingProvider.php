@@ -13,8 +13,14 @@ abstract class AbstractTrackingProvider implements TrackingProviderInterface
     protected array $parcels = [];
 
     abstract public function getCarrierEnum(): CarrierEnum;
-    abstract public function getTrackingStatusEnum(int $trackingStatusValue): TrackingStatusEnumInterface;
-
+//    abstract public function getTrackingStatusEnum(int $trackingStatusValue): TrackingStatusEnumInterface;
+    /**
+     * Convert a tracking status value to a TrackingStatusEnumInterface instance.
+     *
+     * @param mixed $trackingStatusValue The tracking status value, which can be an enum, int, or string.
+     * @return TrackingStatusEnumInterface The corresponding enum instance.
+     */
+    abstract public function getTrackingStatusEnum(mixed $trackingStatusValue): TrackingStatusEnumInterface;
     final public function supports(string $trackingCode): bool
     {
         return str_starts_with($trackingCode, sprintf('%s-', $this->getCarrierEnum()->value));
