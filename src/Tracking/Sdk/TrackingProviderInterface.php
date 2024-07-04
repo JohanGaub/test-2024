@@ -3,9 +3,7 @@
 namespace App\Tracking\Sdk;
 
 use App\Tracking\Handler\Domain\TrackingFailureException;
-use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
-#[AutoconfigureTag('app.tracking_provider')]
 interface TrackingProviderInterface
 {
     /**
